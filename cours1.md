@@ -3,21 +3,21 @@
  * REPL (Read, Eval, Print Loop)
  * help, doc, tab
 
-
-```
+Petit exemple:
+``` MatLab
 x = [0:0.1:2*pi];     % créer un vecteur ligne de 0 à 2pi par incrément de .1
 y = sin(x);           % le ';' supprime la sortie
 plot(x,y);
 ```
 
 ## Types (chap.2 3-9)
-* Nom(Identificateur)
+* Nom (Identificateur)
   * commence par une lettre
   * peut pas être un mot clef (break if)
 * int, char, double, etc.
 * whos
 
-```
+``` MatLab
 A = 2
 whos                 % A est un scalaire de type double
 A = uint8(2)
@@ -27,7 +27,7 @@ whos                 % A est un scalaire de type uint8 (non-signé 8 bit)
 ## Matrice
 #### Création (chap.2 10-15)
 
-```
+``` MatLab
 A = 3.1416
 A = 1:9                                   % 1   2   3   4   5   6   7   8   9
 A = 1:3:9                                 % 1   4   7
@@ -42,7 +42,7 @@ A = [1 2; 3 4]
 ```
 
 #### Indexation (chap.2 16-21)
-```
+``` MatLab
 A = [1 2 3 4; 5 6 7 8; 9 10 11 12]
 A(1,2)      % 2 
 A(6)        % 10
@@ -52,7 +52,7 @@ A(:,2)      % 2e colonne
 A(2,1:2)    % 5   6
 ```
 
-```
+``` MatLab
 size(A)     % 3  4
 length(A)   % 4
 numel(A)    % 12
@@ -63,7 +63,7 @@ numel(A)    % 12
  * **p.27 Attention:** A \ B == inv(A)* B     En fait, \ est une pseudo inverse (!= inv()). 
 
 
-```
+``` MatLab
 A= [1 2 3]; B=[4;5;6];C=5
 A*C
 A*A     % error
@@ -79,7 +79,7 @@ B*A
 
 
 #### système d'équation (chap.2 35-37)
-```
+``` MatLab
 A = [-1 1 -3;2 1 -1;3 -2 4]   % p.35
 B = [4;8;12]
 inv(A)*B
@@ -87,12 +87,12 @@ A\B                           % marcherait même si mal conditionné
 ```
 
 ## MOD vs. REM (chap.2 39-49)
-1) MOD(x,0) =x , whereas REM(x,0)=NaN
-2) MOD(x,y) has the sign of y, while REM(x,y) has the sign of x
-3) MOD and REM are equal if x and y have the same sign.
+1. MOD(x,0) =x , whereas REM(x,0)=NaN
+2. MOD(x,y) has the sign of y, while REM(x,y) has the sign of x
+3. MOD and REM are equal if x and y have the same sign.
 
 ## RECAP
-```
+``` MatLab
 I = imread('cameraman.tif');
 whos
 imshow(I*3)
