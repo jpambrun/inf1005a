@@ -188,7 +188,6 @@ whos
 ``` MatLab
 isspace(' ')
 isspace('a')
-isspace("\t\n")
 
 
 a = sprintf('Reponse =                       % i', 12)
