@@ -13,7 +13,7 @@ plot(x,y);                      %
 ## Types (chap.2 3-9)
 * Nom (Identificateur)
   * commence par une lettre
-  * peut pas être un mot clef (break if)
+  * ne peut pas être un mot clef (break if)
 * int, char, double, etc.
 * whos
 
@@ -27,7 +27,7 @@ whos                            % A est un scalaire de type uint8 (non-signé 8 
 ## Matrice
 #### Création (chap.2 10-15)
 
-x`` MatLab
+``` MatLab
 A = 3.1416
 A = 1:9                         % 1   2   3   4   5   6   7   8   9
 A = 1:3:9                       % 1   4   7
@@ -60,7 +60,7 @@ numel(A)                        % 12
 
 #### Opérations (chap.2 22-34)
 
- * **Attention:** ```A \ B``` n'est pas strictement égal à ```inv(A) * B```. En fait, ```\``` est une pseudo inverse (!= inv()). 
+ * **Attention:** ```A \ B``` n'est pas strictement égal à ```inv(A) * B```. En fait, ```\``` est une pseudo inverse (!= inv()).
 
 
 ``` MatLab
@@ -72,13 +72,13 @@ A*B                             % 32
 A.*A                            % produit élément par élément
 A+A                             % somme élément par élément
 A+B                             % octave ne produit pas d'erreur, mais Matlab ?
-A+C                             % Additionne C à chaque éléments de A
+A+C                             % additionne C à chaque élément de A
 A'+B
 B*A
 ```
 
 
-#### système d'équation (chap.2 35-37)
+#### système d'équations (chap.2 35-37)
 ``` MatLab
 A = [-1 1 -3;2 1 -1;3 -2 4]     % p.35
 B = [4;8;12]
