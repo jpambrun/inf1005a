@@ -242,16 +242,36 @@ Exercice : classé en ordre croissant les valeurs d'un vecteur.
 Solution:
 ``` Matlab
 A = [6 3 2 4 5 2 3]
-A = 'lkdjas jolrjdasflkj '
+%A = 'lkdjas jolrjdasflkj '
 for i = 1:length(A)-1
    for j = i+1:length(A)
       if A(j) < A(i)
          temp = A(j);         % permute A(i) et A(J)
          A(j) = A(i);
          A(i) = temp;
+         fprintf('permute %2i et %2i: ', i, j)
          disp(A)
       end
    end
 end
 disp(A)
+```
+
+Résultat:
+```
+A =
+   6   3   2   4   5   2   3
+permute  1 et  2:    3   6   2   4   5   2   3
+permute  1 et  3:    2   6   3   4   5   2   3
+permute  2 et  3:    2   3   6   4   5   2   3
+permute  2 et  6:    2   2   6   4   5   3   3
+permute  3 et  4:    2   2   4   6   5   3   3
+permute  3 et  6:    2   2   3   6   5   4   3
+permute  4 et  5:    2   2   3   5   6   4   3
+permute  4 et  6:    2   2   3   4   6   5   3
+permute  4 et  7:    2   2   3   3   6   5   4
+permute  5 et  6:    2   2   3   3   5   6   4
+permute  5 et  7:    2   2   3   3   4   6   5
+permute  6 et  7:    2   2   3   3   4   5   6
+   2   2   3   3   4   5   6
 ```
