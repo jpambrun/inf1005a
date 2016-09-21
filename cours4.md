@@ -118,7 +118,7 @@ A = input('Entrer une année')
 if mod(A,4) ~= 0
   fprintf('non ')
 else
-  if mod(A,4) == 0 & mod(A,400) ~= 0
+  if mod(A,100) == 0 && mod(A,400) ~= 0
     fprintf('non ')
   end
 end
