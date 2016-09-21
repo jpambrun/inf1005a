@@ -183,9 +183,9 @@ for L = ['a':'z']         % marche dans octave..
 end
 ```
 
-#### Ex.
-coder eye()
+Exercice: coder eye()
 
+Solution:
 ``` Matlab
 D= [5,4];
 e = [];
@@ -203,8 +203,10 @@ disp(e)
 ```
 
 ### break et continue (chap.4 55)
-Somme de seulement les nombre pairs entre 1 et 10
 
+Exemple: Afficher la somme des nombre pairs entre 1 et 10.
+
+avec continue 
 ``` Matlab
 S=0;
 for i = 1:10
@@ -216,6 +218,7 @@ end
 disp(S)
 ```
 
+avec continue et break
 
 ``` Matlab
 S=0;
@@ -234,15 +237,16 @@ end
 disp(S)
 ```
 
-#### Ex.
-sort:
+Exercice : classé en ordre croissant les valeurs d'un vecteur.
+
+Solution:
 ``` Matlab
 A = [6 3 2 4 5 2 3]
 A = 'lkdjas jolrjdasflkj '
-for i = 1:length(A)
+for i = 1:length(A)-1
    for j = i+1:length(A)
       if A(j) < A(i)
-         temp = A(j);
+         temp = A(j);         % permute A(i) et A(J)
          A(j) = A(i);
          A(i) = temp;
          disp(A)
