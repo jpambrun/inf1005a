@@ -18,28 +18,28 @@
 
 [1] Meilleure utilisation du tableau
 
-[1] Réponse pas clair à certaines question
+[1] Réponse pas claire à certaines questions
 
-[1] Meilleur structure
+[1] Meilleure structure
 
 #### Positif
-[4] Maîtrise de la matière
+[4] Maîtrise de la matière.
 
 [3] Bonne utilisation du support didactique
 
 #### Commentaires
-- Micro? ça serait mieux sans?
+- Micro? Ça serait mieux sans?
 
 
 ### Récapitulatif du cours 4
 
-#### Fichier scripts
+#### Fichier scriptes
 
- * a un nom (pas de mots clef, pas de fonction qui existe déjà, commence par une lettre, etc.)
- * doit obligatoirement avoir une en-tête (nom, but, auteurs, date de création, date de modification)
+ * a un nom (pas de mots clefs, pas de fonction qui existe déjà, commence par une lettre, etc.)
+ * doit obligatoirement avoir un en-tête (nom, but, auteurs, date de création, date de modification)
  * le code doit être indenté
  * les commentaires commencent par %
- * les section par %% (utile pour exécuter une seule section avec ctrl+enter)
+ * les sections par %% (utile pour exécuter une seule section avec ctrl+enter)
  * F5 exécute le stript, F9 le code surligné
  * input() permet de saisir des données de l'utilisateur
  * disp, display, fprintf permettent d'afficher des résultats
@@ -51,7 +51,7 @@
  * opérateurs logiques &, |, |, xor
  * || et && peuvent être coucircuité (p.ex.  (1 || fprintf('abc') == 3) n'affiche pas 'abc' )
  * pseudo-code
-   * permet de strucuré les idées sans avoir à se soucier du code
+   * permet de structurer les idées sans avoir à se soucier du code
    * mots-clef comme Lire, Écrire, TANT QUE condition FAIRE, POUR ensemble_de_données FAIRE, SI condition ALORS --- SINON, etc.
    * doit être indenté aussi
 

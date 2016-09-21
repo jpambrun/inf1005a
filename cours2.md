@@ -223,7 +223,7 @@ A{4}{1}(1)                                   % 'a'
 A(4) = []                                    % supprime un champ
 ```
 
-### structures (a.k.a. enregistrements) (chap.2 57-63)
+### structures (a.k.a. enregistrement) (chap.2 57-63)
 ``` MatLab
 user.name = 'JF pambrun'
 user.email = 'a@bc.com'

@@ -21,7 +21,7 @@ A = 'abracadabra'
 A == 'a'             % 1   0   0   1   0   1   0   1   0   0   1
 A > 'b'              % 0   0   1   0   1   0   1   0   0   1   0
 A > 98               % 0   0   1   0   1   0   1   0   0   1   0
-A == 'ab'            % erreur de dimenssion
+A == 'ab'            % erreur de dimension
 strfind(A, 'ab')     % 1   8
 
 A = 1:5              % 1   2   3   4   5
@@ -75,7 +75,7 @@ sum(sum(A))      % 11 ()
 sum(A(:))        % 11
 ```
 
-## Indexation conditionnel (ou logique) (chap.4 10-11)
+## Indexation conditionnelle (ou logique) (chap.4 10-11)
 ``` Matlab
 A = 1:5                % 1   2   3   4   5
 sel = A > 3            % 0   0   0   1   1
@@ -93,7 +93,7 @@ A = A(A>10) .* 2       % 28   30
  * ~
  * xor
 
-Note impostante:
+Note importante:
  * FAUX si =  0
  * VRAI si ~= 0 (p.ex. 3.1416 ou -12)
 
