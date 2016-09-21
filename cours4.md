@@ -1,22 +1,33 @@
 [3.25] Le professeur sait susciter l’intérêt des étudiants pour la matière du cours.
+
 [3.68] Le professeur explique la matière du cours de façon claire et structurée.
+
 [3.75] Le professeur enrichit le contenu du cours par sa culture scientifique, son expérience ou ses activités de recherche.
+
 [3.87] Le professeur utilise des exemples qui favorisent une meilleure compréhension de la matière.
+
 [3.87] Je suis satisfait des apprentissages réalisés dans ce cours.
 
-Négatifs
+
+#### Négatifs
 [4] Plus d'exemples
+
 [1] Plus participatif
+
 [1] Intonation
+
 [1] Meilleure utilisation du tableau
+
 [1] Réponse pas clair à certaines question
+
 [1] Meilleur structure
 
-Positif
+#### Positif
 [4] Maîtrise de la matière
+
 [3] Bonne utilisation du support didactique
 
-Commentaires
+#### Commentaires
 - Micro? ça serait mieux sans?
 
 
@@ -24,7 +35,7 @@ Commentaires
 
 #### Fichier scripts
 
- * à un nom (pas de mots clef, pas de fonction qui existe déjà, commence par une lettre, etc.)
+ * a un nom (pas de mots clef, pas de fonction qui existe déjà, commence par une lettre, etc.)
  * doit obligatoirement avoir une en-tête (nom, but, auteurs, date de création, date de modification)
  * le code doit être indenté
  * les commentaires commencent par %
