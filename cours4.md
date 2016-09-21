@@ -99,6 +99,34 @@ elseif mod(A, 2) == 0
 end
 ```
 
+Exercice:
+```
+Écrire "Entrer une année"
+A = Lire l'année
+Si A ~/4 ALORS                    % ici '/n' voudra dire 'divisible par n'
+  Écrire "non "
+SINON
+  SI A /100 & ~/400 ALORS
+    Écrire "non "                 % /4 & (/100 ~/400)
+
+Écrire "bissextile"
+```
+
+Solution:
+``` Matlab
+A = input('Entrer une année')
+if mod(A,4) == 0
+  fprintf('non ')
+else
+  if mod(A,4) == 0 & mod(A,400) ~= 0
+    Écrire "non "
+  end
+end
+fprintf('bissextile\n')
+```
+
+
+
 if - elseif en séquence
 ``` Matlab
 %A = input('Écrire une couleur')   % 'bleu'
