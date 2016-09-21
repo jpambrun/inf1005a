@@ -122,6 +122,7 @@ Exercice: Déterminer si l'année est bissextile
  1. si l'année est divisible par 4 et non divisible par 100, ou
  2. si l'année est divisible par 400.
 
+Solution 1:
 ```
 Écrire "Entrer une année"
 A = Lire l'année
@@ -137,6 +138,7 @@ SINON                             % /4
       Écrire "non bissextile"     % /4 /100 ~/400
 ```
 
+Solution 2:
 ```
 Écrire "Entrer une année"
 A = Lire l'année
@@ -149,6 +151,7 @@ SINON
 Écrire "bissextile"
 ```
 
+Solution 3:
 ```
 Écrire "Entrer une année"
 Lire l'année
