@@ -87,15 +87,13 @@ A(A>3) = A(A>3)+10     % 1    2    3   14   15
 A = A(A>10) .* 2       % 28   30
 ```
 
-
-% +++ p.11 ++++
-
 ## Expression booléenne (ou logique) (chap.4 12-17)
  * &
  * |
  * ~
  * xor
 
+Note impostante:
  * FAUX si =  0
  * VRAI si ~= 0 (p.ex. 3.1416 ou -12)
 
@@ -105,7 +103,7 @@ A = A(A>10) .* 2       % 28   30
 
 2 | 0   % 1 (type logical)
 2 & -2  % 1 (type logical)
-'''
+```
 
 
 ## Structures de programmation & décision (chap.4 18-37)
@@ -113,18 +111,18 @@ A = A(A>10) .* 2       % 28   30
 ### pseudo-code
 Exercice: trouver la plus grande valeur d'un vecteur
 Solution:
-'''
+```
 lePlusGros = -inf
 POUR x FAIRE
   SI x > lePlusGros ALORS
     lePlusGros = x
-'''
+```
 
 Exercice: Déterminer si l'année est bissextile
  1. si l'année est divisible par 4 et non divisible par 100, ou
  2. si l'année est divisible par 400.
 
-'''
+```
 Écrire "Entrer une année"
 A = Lire l'année
 Si A ~/4 ALORS                    % ici '/n' voudra dire 'divisible par n'
@@ -137,9 +135,9 @@ SINON                             % /4
       Écrire "bissextile"         % /4 /100 /400
     SINON
       Écrire "non bissextile"     % /4 /100 ~/400
+```
 
-
-'''
+```
 Écrire "Entrer une année"
 A = Lire l'année
 Si A ~/4 ALORS                    % ici '/n' voudra dire 'divisible par n'
@@ -149,13 +147,13 @@ SINON
     Écrire "non "                 % /4 & (/100 ~/400)
 
 Écrire "bissextile"
-'''
+```
 
-'''
+```
 Écrire "Entrer une année"
 Lire l'année
 SI /400 | (/4 & ~/100) ALORS      % ici '/n' voudra dire 'divisible par n'
   Écrire "bissextile"
 SINON
   Écrire "non bissextile"
-'''
+```
