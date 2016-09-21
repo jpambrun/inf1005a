@@ -119,7 +119,7 @@ if mod(A,4) == 0
   fprintf('non ')
 else
   if mod(A,4) == 0 & mod(A,400) ~= 0
-    Écrire "non "
+    fprintf('non ')
   end
 end
 fprintf('bissextile\n')
