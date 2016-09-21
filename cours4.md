@@ -73,7 +73,7 @@ if - else:
 if mod(A,1) == 0
    disp('A est un entier')
 else
-   disp('A n'est pas un entier')
+   disp('A n''est pas un entier')
 end
 ```
 
