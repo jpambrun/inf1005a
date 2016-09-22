@@ -175,6 +175,43 @@ while(L <= 'z')
 end
 ```
 
+Exemple: implémenter les pseudo-code suivant.
+
+```
+Écrire 'Entrer le nombre à deviner: '
+nb_a_deviner = Lire le nombre à deviner
+Devinée = Faux
+TANT QUE Devinée est Faux FAIRE
+  Écrire 'Entrer un nombre: '
+  nb = Lire un nombre
+  SI nb = nb_a_deviner ALORS
+    Devinée = Vrai    
+  SINON
+  SI nb < nb_a_deviner ALORS
+    Écrire 'le nombre est trop petit'
+  SINON
+    Écrire 'le nombre est trop grand'
+Écrire 'BRAVO'
+```
+
+Solution:
+
+``` Matlab
+nb_a_deviner = input('Entrer le nombre à deviner: ')
+devinee = 0
+while(~devinee)
+  nb_a_deviner = input('Entrer un nombre: ')
+  if nb = nb_a_deviner
+    devinee = 1
+  else
+  if nb < nb_a_deviner
+    disp('le nombre est trop petit')
+  else
+    disp('le nombre est trop grand')
+disp('BRAVO')
+```
+
+
 ### For (chap.4 52-54)
 Écrire l'alphabet:
 ``` Matlab
