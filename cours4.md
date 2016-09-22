@@ -48,7 +48,7 @@
  * opérateurs relationnels >, <, <=, >=, ==, ~=
  * all(), any()
  * indexation logique (p.ex. A =1:5;A(A<3)=A(A<3)*10 =>    10   20    3    4    5)
- * opérateurs logiques &, |, |, xor
+ * opérateurs logiques &, |, ~, xor
  * || et && peuvent être coucircuité (p.ex.  (1 || fprintf('abc') == 3) n'affiche pas 'abc' )
  * pseudo-code
    * permet de structurer les idées sans avoir à se soucier du code
