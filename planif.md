@@ -1,5 +1,5 @@
 
-## Réel utilisation du temps (utilisé/prévu)
+## Réelle utilisation du temps (utilisé/prévu)
  * C1 : intro(1 -> 1/1) + types(2 => 2/5)
  * C2 : types (3 -> 5/5)
  * C3 : script (1 -> **1**/2) + structures (2 => 2/7)
