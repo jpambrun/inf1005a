@@ -1,16 +1,16 @@
 
-## Utilisation du temps (durant la séance) [total utilisé / total prévu]
- * C1 : intro(1)[1/1] + types(2)[2/5]
- * C2 : types (3)[5/5]
- * C3 : script (1)[**1/2**] + structures (2)[2/7]
- * C4 (22 sept.): structures (3) [**5/7**]
+## Utilisation du temps
  
-On a trois heures d'avance.
+| Chapitre (hr)  | C1| C2| C3| C4| C5| C6| C7| C8| C9| C10| C11| C12| C13|temps réel | delta  |
+|:---------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:| ------:| ------:|
+| 1-Intro (1)    | 1 |   |   |   |   |   |   |   |   |    |    |    |    |   1/1  |        |
+| 2-Types (5)    | 2 | 3 |   |   |   |   |   |   |   |    |    |    |    |   5/5  |        |
+| 3-Script (2)   |   |   | 1 |   |   |   |   |   |   |    |    |    |    | **1/2**|   -1   |
+| 3-Struct (7)   |   |   | 2 | 3 |   |   |   |   |   |    |    |    |    | **5/7**|   -3   |
+| 4-Debug (4)    |   |   |   |   | 1 |   |   |   |   |    |    |    |    |   1/1  |        |
+| Exercice (0)   |   |   |   |   | 2 |   |   |   |   |    |    |    |    | **2/0**|   -1   |
+| 4-Debug (4)    |   |   |   |   |   | 3 |   |   |   |    |    |    |    |   3/3  |        |
+| 5-Fonct (6)    |   |   |   |   |   |   | 3 |   |   |    |    |    |    |   3/6  |        |
+| Révision (2)   |   |   |   |   |   |   |   | 3 |   |    |    |    |    | **3/2**|   0    |
+| INTRA          |   |   |   |   |   |   |   |   |   |    |    |    |    |        |        |
 
-## prévu
- * C5 (29 sept.): Débogage(1)[1/4] + Exercice(2)[**2/0**]
- * C6 (6 oct.): Débogage (3)[4/4]
- * C7 (20 oct.):  Fonction (3)[3/6]
- * C8 (27 oct.):  Révision (3)[**3/2**]
-    * intra
-    * début TD 3
