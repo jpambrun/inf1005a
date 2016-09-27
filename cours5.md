@@ -7,7 +7,6 @@ Note:
 
 ## Déboguage: calcul du temps
 
-
 ``` Matlab
 t1 = clock
 %something slow
@@ -54,7 +53,20 @@ Soit le code HTML suivant:
 ```
 Écrire le code qui permet d'extraire le contenu des balises ```<h1>``` ou ```<p>```.
 
+Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 1 en son centre.
 
+```
++--------------------+
+|####################|
+|########*  *########|
+|#####*        *#####|
+|####*          *####|
+|####*          *####|
+|#####*        *#####|
+|########*  *########|
+|####################|
++--------------------+
+```
 
 
 
