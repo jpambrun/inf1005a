@@ -34,3 +34,8 @@ pause(1.5)
 ```
 
 ## Exercices
+
+Créer une sous-image de 256x256 représentant le millieu d'une image de taille inconue NxM, N et M > 256.
+
+Réétaler les valeurs d'une matrice entre clim = [new_min, new_max]
+
