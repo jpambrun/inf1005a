@@ -37,5 +37,23 @@ pause(1.5)
 
 Créer une sous-image de 256x256 représentant le millieu d'une image de taille inconue NxM, N et M > 256.
 
-Réétaler les valeurs d'une matrice entre clim = [new_min, new_max]
+Réétaler les valeurs d'une matrice entre clim = [new_min, new_max] vers [0,255] pour l'affichage. Convertir en uint8.
+
+Calculer l'histogramme d'une image.
+
+Soit le code HTML suivant:
+``` HTML
+<html>
+<body>
+<h1>Un titre</h1>
+<p>Un paragraphe</p>
+</body>
+</html>
+```
+Écrire le code qui permet d'extraire le contenue des balises <h1> et <p>.
+
+
+
+
+
 
