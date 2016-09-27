@@ -50,7 +50,7 @@ Soit le code HTML suivant:
 </body>
 </html>
 ```
-Écrire le code qui permet d'extraire le contenue des balises <h1> et <p>.
+Écrire le code qui permet d'extraire le contenue des balises ```<h1>``` et ```<p>```.
 
 
 
