@@ -3,7 +3,11 @@ Note:
  * On a déjà vu les 15 primières heures en 12.
 
 ## Retour sur le cours 4
- * Todo
+ * if – elseif - else
+ * switch-case
+ * while
+ * for
+ * break et continue
 
 ## Déboguage: calcul du temps
 
