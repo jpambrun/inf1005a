@@ -34,19 +34,46 @@ pause(1.5)
 
 ## Exercices
 
-#### Nombres premiers
-Trouver les nombre premier (nombre qui se divise seulement par 1 et lui-même) entre 50 et 100.
+#### E1 : Nombres premiers
+Trouver les nombres premier (nombre qui se divise seulement par 1 et lui-même) entre 50 et 100.
 
-#### Rognage (cropping) d'image
+#### E2 : Rognage (cropping) d'image
 Créer une sous-image de 256x256 représentant le millieu d'une image de taille inconue NxM, N et M > 256.
 
-#### Étalonnage des niveaux de gris
+#### E3 : Étalonnage des niveaux de gris
 Réétaler les valeurs d'une matrice entre clim = [new_min, new_max] vers [0,255] pour l'affichage. Convertir en uint8.
 
-#### Calcul d'histogramme
+``` Matlab
+info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnée
+I = double( dicomread(info) );                     % charge l'image en double
+I = I * info.RescaleSlope + info.RescaleIntercept; % applique la transformation pour obtenir les HU
+
+imshow(I,[])
+imcontrast
+
+%         -1000 (vacuum)                    0 (eau)                    1000
+% DICOM      |------------------------------|--------------------------->
+%                                   
+% display                                   |-----------|
+%                                           0 (noir)   255 (blanc)
+
+
+% VOI transform
+% DICOM      |------------------------v1-----|-------------v2----------->
+%                                      \                  /
+% display                              0|----------------|255
+```
+
+#### E4 : Calcul d'histogramme
 Calculer l'histogramme d'une image.
 
-#### Décodage HTML
+``` Matlab
+I = imread('cameraman.tif');
+imshow(I)
+imcontrast
+```
+
+#### E5 : Décodage HTML
 Soit le code HTML suivant, écrire le code qui permet d'extraire le contenu des balises ```<h1>``` ou ```<p>```.
 
 ``` HTML
@@ -58,7 +85,13 @@ Soit le code HTML suivant, écrire le code qui permet d'extraire le contenu des 
 </html>
 ```
 
-#### Création d'une matrice contenant un cercle
+``` Matlab
+html = '<html><body><h1>Un titre</h1><p>Un paragraphe</p></body></html>';
+tag = 'p';
+```
+
+
+#### E6 : Création d'une matrice contenant un cercle
 Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 1 en son centre.
 
 ```
@@ -75,8 +108,218 @@ Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 
            M
 ```
 
-#### Décodage et éxécution de comandes
+#### E7 : Décodage et éxécution de commandes
 
 
 
+## Solutions
+
+#### E1
+#### Solution 1
+``` Matlab
+nombre_premier = []
+for n = 50:100
+    
+    n_est_premier = true;
+    
+    for i = 2:n-1
+        if mod(n,i) == 0
+            n_est_premier = false;
+        end
+    end
+    
+    if n_est_premier
+        nombre_premier = [nombre_premier n];
+    end
+    
+end
+disp(nombre_premier)
+```
+
+#### Solution 2
+``` Matlab
+nombre_premier = []
+for n = 50:100
+    
+    n_est_premier = true;
+    
+    for i = 2:n-1
+        if mod(n,i) == 0
+            n_est_premier = false;
+            break;                   % pas la peine de continuer
+        end
+    end
+    
+    if n_est_premier
+        nombre_premier = [nombre_premier n];
+    end
+    
+end
+disp(nombre_premier)
+```
+
+#### Solution 3
+``` Matlab
+nombre_premier = []
+for n = 50:100
+    
+    n_est_premier = true;
+    
+    for i = 2:sqrt(n)                % pas la peine de tester après sqrt(n)
+        if mod(n,i) == 0
+            n_est_premier = false;
+            break;                   % pas la peine de continuer
+        end
+    end
+    
+    if n_est_premier
+        nombre_premier = [nombre_premier n];
+    end
+    
+end
+disp(nombre_premier)
+```
+
+
+#### E2
+``` Matlab
+I = imread('peppers.png');
+
+[sx,sy,sz] = size(I);
+Ic = I( sx/2-127:sx/2+128 , sy/2-127:sy/2+128, :);
+
+disp(size(Ic))
+imshow(Ic)
+
+```
+
+#### E3
+``` Matlab
+info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnée
+I = double( dicomread(info) );                     % charge l'image en double
+I = I * info.RescaleSlope + info.RescaleIntercept; % applique la transformation pour obtenir les HU
+
+voi = [-134 301];  % value of interest
+I = uint8(  ( double(I) - voi(1) )/( voi(2) - voi(1) ) * 255 );
+imshow(I)
+```
+
+#### E4
+#### Solution 1
+``` Matlab
+I = imread('cameraman.tif');
+bins = zeros(256,1);
+
+for i = 1:size(bins)
+    bins(i) = sum( I(:) == i-1 );
+end
+
+plot(bins)
+% tic toc = 0.065654
+```
+#### Solution 2
+``` Matlab
+I = imread('cameraman.tif');
+bins = zeros(256,1);
+
+for x = 1:size(I,1)
+    for y = 1:size(I,2)
+        bins( I(x,y)+1 ) = bins( I(x,y)+1 ) + 1;
+    end
+end
+
+plot(bins)
+```
+
+#### Solution 3
+``` Matlab
+I = imread('cameraman.tif');
+bins = zeros(256,1);
+
+for val = I(:)'
+    bins(val+1) = bins(val+1) + 1;
+end
+
+plot(bins)
+```
+
+#### E5
+``` Matlab
+html = '<html><body><h1>Un titre</h1><p>Un paragraphe</p></body></html>';
+tag = 'p';
+
+debut = strfind(html, [ '<'  tag '>' ]);
+fin   = strfind(html, [ '</' tag '>' ]);
+disp( html( debut:fin ) )
+
+debut = strfind(html, [ '<'  tag '>' ]) + length(tag)+2;
+fin   = strfind(html, [ '</' tag '>' ]) -1;
+disp( html( debut:fin ) )
+```
+
+
+#### E6
+#### Solution 1
+``` Matlab
+M = 200;
+R = 25;
+
+I = zeros(M, M);
+
+for i = 1:M
+    for j = 1:M
+        I(i,j) = sqrt( (M/2 - i).^2 + (M/2 - j).^2 ) < 25;
+    end
+end
+imshow(I)
+```
+
+#### Solution 2
+``` Matlab
+x = repmat(1:M, [M,1]);
+y = repmat((1:M)', [1,M]);
+
+imshow([x y],[])
+I = sqrt( (M/2 - x).^2 + (M/2 - y).^2) < 25;
+
+imshow(I)
+```
+
+#### E7
+``` Matlab
+commandes = {'<square> 24 55 23 <square>' ...
+             '<circle> 24 55 23 <circle>' ...
+             '<line> 24 55 23 65 <line>' ...
+             '<oval> 24 55 23 65 <oval>'};
+
+for cmd = commandes
+
+    cmd = strsplit(char(cmd));
+    
+    switch char(cmd(1))
+        case '<square>'
+            fprintf('call drawSquare(%d, %d, %d)\n',...
+                str2num(char(cmd(2))),...
+                str2num(char(cmd(3))),...
+                str2num(char(cmd(4))) )
+        case '<circle>'
+            fprintf('call drawCircle(%d, %d, %d)\n',...
+                str2num(char(cmd(2))),...
+                str2num(char(cmd(3))),...
+                str2num(char(cmd(4))))            
+        case '<line>'
+            fprintf('call drawLine(%d, %d, %d, %d)\n',...
+                str2num(char(cmd(2))),...
+                str2num(char(cmd(3))),...
+                str2num(char(cmd(4))),...
+                str2num(char(cmd(5))) ) 
+        case '<oval>'
+            fprintf('call drawOval(%d, %d, %d, %d)\n',...
+                str2num(char(cmd(2))),...
+                str2num(char(cmd(3))),...
+                str2num(char(cmd(4))),...
+                str2num(char(cmd(5))) )            
+    end
+end
+```
 
