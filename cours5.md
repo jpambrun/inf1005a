@@ -9,31 +9,59 @@ Note:
  * for
  * break et continue
 
+## Résolution de problèmes
+ 1. La **définition** du problème 
+ 2. L’**analyse** du problème 
+ 3. La **conception** des algorithmes 
+ 4. La mise au point (aka. l'**implémentation**) du programme MATLAB
+ 5. La **vérification** du programme 
+
+### 1.Définition
+QUI? QUE? QUOI?
+
+ - Identifier les entités à manipuler
+ - Identifier les traitements à effectuer
+ - Identifier les résultats attendus
+
+### 2.Analyse
+COMMENT?
+
+ - Inventer et réfléchir à diverses solutions possibles. 
+ - Il faut s'attendre à envisager plusieurs possibilités avant de trouver la bonne. 
+    * En programmation, il n'y a pas de solution unique.
+
+
 ## Déboguage: calcul du temps
 
+#### pause
 ``` Matlab
-t1 = clock
-%something slow
-t2 = clock
+pause()
+pause(1.5)
+```
+
+#### clock
+``` Matlab
+t1 = clock;
+pause(1) % instructions 
+t2 = clock;
 
 temps_ecoule = etime(t2,t1)
 ```
 
+#### cputime
 ``` Matlab
-temps = cputime
+t1 = cputime;
+pause(1) % instructions 
+t2 = cputime;
+
+t2-t1
 ```
 
+#### tic -toc
 ``` Matlab
 tic;
-% instructions      
+pause(1) % instructions       
 toc
-```
-
-tic toc == wall time ou cpu time?
-
-``` Matlab
-pause()
-pause(1.5)
 ```
 
 ## Exercices
