@@ -114,8 +114,7 @@ Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 
 
 ## Solutions
 
-#### E1
-#### Solution 1
+#### E1 - Solution 1
 ``` Matlab
 nombre_premier = []
 for n = 50:100
@@ -136,7 +135,7 @@ end
 disp(nombre_premier)
 ```
 
-#### Solution 2
+#### E1 - Solution 2
 ``` Matlab
 nombre_premier = []
 for n = 50:100
@@ -158,7 +157,7 @@ end
 disp(nombre_premier)
 ```
 
-#### Solution 3
+#### E1 - Solution 3
 ``` Matlab
 nombre_premier = []
 for n = 50:100
@@ -204,8 +203,7 @@ I = uint8(  ( double(I) - voi(1) )/( voi(2) - voi(1) ) * 255 );
 imshow(I)
 ```
 
-#### E4
-#### Solution 1
+#### E4 - Solution 1
 ``` Matlab
 I = imread('cameraman.tif');
 bins = zeros(256,1);
@@ -217,7 +215,7 @@ end
 plot(bins)
 % tic toc = 0.065654
 ```
-#### Solution 2
+#### E4 - Solution 2
 ``` Matlab
 I = imread('cameraman.tif');
 bins = zeros(256,1);
@@ -231,7 +229,7 @@ end
 plot(bins)
 ```
 
-#### Solution 3
+#### E4 - Solution 3
 ``` Matlab
 I = imread('cameraman.tif');
 bins = zeros(256,1);
@@ -258,8 +256,7 @@ disp( html( debut:fin ) )
 ```
 
 
-#### E6
-#### Solution 1
+#### E6 -Solution 1
 ``` Matlab
 M = 200;
 R = 25;
@@ -274,7 +271,7 @@ end
 imshow(I)
 ```
 
-#### Solution 2
+#### E6 -Solution 2
 ``` Matlab
 x = repmat(1:M, [M,1]);
 y = repmat((1:M)', [1,M]);
