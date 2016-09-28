@@ -1,6 +1,7 @@
 Note:
  * Les boucles ne devaient pas faire partie des premiers exercices du TD 2.
  * On a déjà vu les 15 premières heures en 12.
+ * Remplacer github par gitprint dans l'URL permet d'imprimer facilement.
 
 ## Retour sur le cours 4
  * if – elseif - else
