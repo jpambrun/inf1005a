@@ -47,7 +47,8 @@ Réétaler les valeurs d'une matrice entre clim = [new_min, new_max] vers [0,255
 Calculer l'histogramme d'une image.
 
 #### Décodage HTML
-Soit le code HTML suivant:
+Soit le code HTML suivant, écrire le code qui permet d'extraire le contenu des balises ```<h1>``` ou ```<p>```.
+
 ``` HTML
 <html>
 <body>
@@ -56,7 +57,6 @@ Soit le code HTML suivant:
 </body>
 </html>
 ```
-Écrire le code qui permet d'extraire le contenu des balises ```<h1>``` ou ```<p>```.
 
 #### Création d'une matrice contenant un cercle
 Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 1 en son centre.
