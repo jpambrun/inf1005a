@@ -34,14 +34,19 @@ pause(1.5)
 
 ## Exercices
 
+#### Nombres premiers
 Trouver les nombre premier (nombre qui se divise seulement par 1 et lui-même) entre 50 et 100.
 
+#### Rognage (cropping) d'image
 Créer une sous-image de 256x256 représentant le millieu d'une image de taille inconue NxM, N et M > 256.
 
+#### Étalonnage des niveaux de gris
 Réétaler les valeurs d'une matrice entre clim = [new_min, new_max] vers [0,255] pour l'affichage. Convertir en uint8.
 
+#### Calcul d'histogramme
 Calculer l'histogramme d'une image.
 
+#### Décodage HTML
 Soit le code HTML suivant:
 ``` HTML
 <html>
@@ -53,6 +58,7 @@ Soit le code HTML suivant:
 ```
 Écrire le code qui permet d'extraire le contenu des balises ```<h1>``` ou ```<p>```.
 
+#### Création d'une matrice contenant un cercle
 Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 1 en son centre.
 
 ```
@@ -69,6 +75,7 @@ Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 
            M
 ```
 
+#### Décodage et éxécution de comandes
 
 
 
