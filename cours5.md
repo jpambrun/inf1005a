@@ -1,6 +1,6 @@
 Note:
- * Les boucles ne devait pas faire partie des permiers exercices du TD 2.
- * On a déjà vu les 15 primières heures en 12.
+ * Les boucles ne devaient pas faire partie des premiers exercices du TD 2.
+ * On a déjà vu les 15 premières heures en 12.
 
 ## Retour sur le cours 4
  * if – elseif - else
@@ -12,11 +12,11 @@ Note:
 Faire l'exercice de classement.
 
 ## Résolution de problèmes
- 1. La **définition** du problème 
- 2. L’**analyse** du problème 
- 3. La **conception** des algorithmes 
+ 1. La **définition** du problème
+ 2. L’**analyse** du problème
+ 3. La **conception** des algorithmes
  4. La mise au point (aka. l'**implémentation**) du programme MATLAB
- 5. La **vérification** du programme 
+ 5. La **vérification** du programme
 
 ### 1.Définition
 QUI? QUE? QUOI?
@@ -28,17 +28,17 @@ QUI? QUE? QUOI?
 ### 2.Analyse
 COMMENT?
 
- - Inventer et réfléchir à diverses solutions possibles. 
- - Il faut s'attendre à envisager plusieurs possibilités avant de trouver la bonne. 
+ - Inventer et réfléchir à diverses solutions possibles.
+ - Il faut s'attendre à envisager plusieurs possibilités avant de trouver la bonne.
     * En programmation, il n'y a pas de solution unique.
 
 
 ### 3.Conception
 
- - Écrire dans l’ordre les opérations déduites de l’analyse. 
- - Faire ressortir la structure de base 
-   * les structures de décision 
-   * les structures de répétition 
+ - Écrire dans l’ordre les opérations déduites de l’analyse.
+ - Faire ressortir la structure de base
+   * les structures de décision
+   * les structures de répétition
  - Utiliser adéquatement le pseudo-code schématique.
 
 ### 4. Mise au point (aka. **implémentation**)
@@ -48,15 +48,15 @@ COMMENT?
 ### 5. Vérification
  - s'assurer que son programme fonctionne bien
  - Vérifier le programme avec des données tests
-   * Données usuelles; 
-   * Données de cas habituellement problématique: matrice vide, matrice ligne, matrice colonne, nombres très grands ou très petits, nombres positifs, nombres négatifs. 
-   * Données pour vérifier les conditions 
- 
+   * Données usuelles;
+   * Données de cas habituellement problématique: matrice vide, matrice ligne, matrice colonne, nombres très grands ou très petits, nombres positifs, nombres négatifs.
+   * Données pour vérifier les conditions
+
  Certaines des techniques communes
  - Test unitaire (unit testting)
-   * test chaque petite fonction selon et test comment elles se compote avec des données invalides
+   * test chaque petite fonction selon et test comment elles se comportent avec des données invalides
  - Test de couverture (coverage testting)
-   * s'assure que chaque tous le code à été testé
+   * s'assure que tout le code a été testé
  - développement piloté par les tests (test driven development)
    * code d'abord les tests avec même l'implémentation des fonctions
 
@@ -71,7 +71,7 @@ pause(1.5)
 #### clock
 ``` Matlab
 t1 = clock;
-pause(1) % instructions 
+pause(1) % instructions
 t2 = clock;
 
 temps_ecoule = etime(t2,t1)
@@ -80,7 +80,7 @@ temps_ecoule = etime(t2,t1)
 #### cputime
 ``` Matlab
 t1 = cputime;
-pause(1) % instructions 
+pause(1) % instructions
 t2 = cputime;
 
 t2-t1
@@ -89,23 +89,23 @@ t2-t1
 #### tic -toc
 ``` Matlab
 tic;
-pause(1) % instructions       
+pause(1) % instructions
 toc
 ```
 
 ## Exercices
 
 #### E1 : Nombres premiers
-Trouver les nombres premier (nombre qui se divise seulement par 1 et lui-même) entre 50 et 100.
+Trouver les nombres premiers (nombres qui se divisent seulement par 1 et lui-même) entre 50 et 100.
 
 #### E2 : Rognage (cropping) d'image
-Créer une sous-image de 256x256 représentant le millieu d'une image de taille inconue NxM, N et M > 256.
+Créer une sous-image de ```256x256``` représentant le milieu d'une image de taille inconnue ```NxM```, ```N``` et ```M``` > 256.
 
 #### E3 : Étalonnage des niveaux de gris
-Réétaler les valeurs d'une matrice entre clim = [new_min, new_max] vers [0,255] pour l'affichage. Convertir en uint8.
+Réétaler les valeurs d'une matrice entre ```voi = [v1, c2]``` vers ```[0, 255]``` pour l'affichage. Convertir en uint8.
 
 ``` Matlab
-info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnée
+info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnées
 I = double( dicomread(info) );                     % charge l'image en double
 I = I * info.RescaleSlope + info.RescaleIntercept; % applique la transformation pour obtenir les HU
 
@@ -114,10 +114,9 @@ imcontrast
 
 %         -1000 (vacuum)                    0 (eau)                    1000
 % DICOM      |------------------------------|--------------------------->
-%                                   
+%
 % display                                   |-----------|
 %                                           0 (noir)   255 (blanc)
-
 
 % VOI transform
 % DICOM      |------------------------v1-----|-------------v2----------->
@@ -126,7 +125,7 @@ imcontrast
 ```
 
 #### E4 : Calcul d'histogramme
-Calculer l'histogramme d'une image.
+Calculer l'histogramme d'une image I.
 
 ``` Matlab
 I = imread('cameraman.tif');
@@ -148,12 +147,12 @@ Soit le code HTML suivant, écrire le code qui permet d'extraire le contenu des 
 
 ``` Matlab
 html = '<html><body><h1>Un titre</h1><p>Un paragraphe</p></body></html>';
-tag = 'p';
+tag = 'p'; % ou 'h1'
 ```
 
 
 #### E6 : Création d'une matrice contenant un cercle
-Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 1 en son centre.
+Créer une matrice ```MxM``` de 0 (noir) avec un cercle de rayon ```R``` dont les valeurs sont égales à 1 (blanc) au centre.
 
 ```
 +--------------------+
@@ -169,9 +168,18 @@ Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 
            M
 ```
 
-#### E7 : Décodage et éxécution de commandes
+#### E7 : Décodage et exécution de commandes
 
+Soit les commandes suivantes dans un tableau de cellules ```commandes```:
 
+``` xml
+<square> x y w <square>
+<circle> x y r <circle>
+<line> x1 y1 x2 y2 <line>
+<oval> x y w h <oval>
+```
+
+Créer un programme qui appel les fonctions ```drawSquare(x,y,w)```, ```drawCircle(x,y,r)```, ```drawLine(x1,y1,x2,y2)``` ou ```drawOval(x,y,w,h)``` en fonction de la liste de commandes.
 
 ## Solutions
 
@@ -179,19 +187,19 @@ Créer une matrice MxM de zéros avec un cercle de rayon R dont la valeur égal 
 ``` Matlab
 nombre_premier = []
 for n = 50:100
-    
+
     n_est_premier = true;
-    
+
     for i = 2:n-1
         if mod(n,i) == 0
             n_est_premier = false;
         end
     end
-    
+
     if n_est_premier
         nombre_premier = [nombre_premier n];
     end
-    
+
 end
 disp(nombre_premier)
 ```
@@ -200,20 +208,20 @@ disp(nombre_premier)
 ``` Matlab
 nombre_premier = []
 for n = 50:100
-    
+
     n_est_premier = true;
-    
+
     for i = 2:n-1
         if mod(n,i) == 0
             n_est_premier = false;
             break;                   % pas la peine de continuer
         end
     end
-    
+
     if n_est_premier
         nombre_premier = [nombre_premier n];
     end
-    
+
 end
 disp(nombre_premier)
 ```
@@ -222,20 +230,20 @@ disp(nombre_premier)
 ``` Matlab
 nombre_premier = []
 for n = 50:100
-    
+
     n_est_premier = true;
-    
+
     for i = 2:sqrt(n)                % pas la peine de tester après sqrt(n)
         if mod(n,i) == 0
             n_est_premier = false;
             break;                   % pas la peine de continuer
         end
     end
-    
+
     if n_est_premier
         nombre_premier = [nombre_premier n];
     end
-    
+
 end
 disp(nombre_premier)
 ```
@@ -255,7 +263,7 @@ imshow(Ic)
 
 #### E3
 ``` Matlab
-info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnée
+info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnées
 I = double( dicomread(info) );                     % charge l'image en double
 I = I * info.RescaleSlope + info.RescaleIntercept; % applique la transformation pour obtenir les HU
 
@@ -353,7 +361,7 @@ commandes = {'<square> 24 55 23 <square>' ...
 for cmd = commandes
 
     cmd = strsplit(char(cmd));
-    
+
     switch char(cmd(1))
         case '<square>'
             fprintf('call drawSquare(%d, %d, %d)\n',...
@@ -364,19 +372,19 @@ for cmd = commandes
             fprintf('call drawCircle(%d, %d, %d)\n',...
                 str2num(char(cmd(2))),...
                 str2num(char(cmd(3))),...
-                str2num(char(cmd(4))))            
+                str2num(char(cmd(4))))
         case '<line>'
             fprintf('call drawLine(%d, %d, %d, %d)\n',...
                 str2num(char(cmd(2))),...
                 str2num(char(cmd(3))),...
                 str2num(char(cmd(4))),...
-                str2num(char(cmd(5))) ) 
+                str2num(char(cmd(5))) )
         case '<oval>'
             fprintf('call drawOval(%d, %d, %d, %d)\n',...
                 str2num(char(cmd(2))),...
                 str2num(char(cmd(3))),...
                 str2num(char(cmd(4))),...
-                str2num(char(cmd(5))) )            
+                str2num(char(cmd(5))) )
     end
 end
 ```
