@@ -102,7 +102,7 @@ Trouver les nombres premiers (nombres qui se divisent seulement par 1 et lui-mê
 Créer une sous-image de ```256x256``` représentant le milieu d'une image de taille inconnue ```NxM```, ```N``` et ```M``` > 256.
 
 #### E3 : Étalonnage des niveaux de gris
-Réétaler les valeurs d'une matrice entre ```voi = [v1, c2]``` vers ```[0, 255]``` pour l'affichage. Convertir en uint8.
+Réétaler les valeurs d'une matrice entre ```voi = [v1, v2]``` vers ```[0, 255]``` pour l'affichage. Convertir en uint8.
 
 ``` Matlab
 info = dicominfo('IM-0001-0001.dcm')               % charge les métadonnées
