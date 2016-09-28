@@ -9,6 +9,8 @@ Note:
  * for
  * break et continue
 
+Faire l'exercice de classement.
+
 ## Résolution de problèmes
  1. La **définition** du problème 
  2. L’**analyse** du problème 
