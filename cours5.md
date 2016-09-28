@@ -31,6 +31,33 @@ COMMENT?
     * En programmation, il n'y a pas de solution unique.
 
 
+### 3.Conception
+
+ - Écrire dans l’ordre les opérations déduites de l’analyse. 
+ - Faire ressortir la structure de base 
+   * les structures de décision 
+   * les structures de répétition 
+ - Utiliser adéquatement le pseudo-code schématique.
+
+### 4. Mise au point (aka. **implémentation**)
+ - Coder la solution
+ - Faire en sorte que le programme fonctionne bien.
+
+### 5. Vérification
+ - s'assurer que son programme fonctionne bien
+ - Vérifier le programme avec des données tests
+   * Données usuelles; 
+   * Données de cas habituellement problématique: matrice vide, matrice ligne, matrice colonne, nombres très grands ou très petits, nombres positifs, nombres négatifs. 
+   * Données pour vérifier les conditions 
+ 
+ Certaines des techniques communes
+ - Test unitaire (unit testting)
+   * test chaque petite fonction selon et test comment elles se compote avec des données invalides
+ - Test de couverture (coverage testting)
+   * s'assure que chaque tous le code à été testé
+ - développement piloté par les tests (test driven development)
+   * code d'abord les tests avec même l'implémentation des fonctions
+
 ## Déboguage: calcul du temps
 
 #### pause
