@@ -6,18 +6,26 @@
    4. La mise au point (aka. l'**implémentation**) du programme MATLAB
    5. La **vérification** du programme
 
-## Déboguage: calcul du temps
+## Aide au déboguague (chap. 5 p.11-16)
+
+### Calcul du temps (chap. 5 p.11-16)
 
 #### pause
+
+```pause()``` peut être utile pour stopper momentanément l'exécution dans une boucle.
+
 ``` Matlab
-pause()
-pause(1.5)
+for i = 1:10
+  % instructions
+  pause()         % pause jusqu'à ce que l'usager touche le clavier
+  pause(1.5)      % pause 1.5 secondes
+end
 ```
 
 #### clock
 ``` Matlab
 t1 = clock;
-pause(1) % instructions
+pause(1)         % instructions longues
 t2 = clock;
 
 temps_ecoule = etime(t2,t1)
@@ -25,16 +33,31 @@ temps_ecoule = etime(t2,t1)
 
 #### cputime
 ``` Matlab
-t1 = cputime;
-pause(1) % instructions
-t2 = cputime;
+disp(cputime);
+pause(5);
+disp(cputime);
 
-t2-t1
+% dans Octave
+> 1.6967
+> 1.7200
 ```
 
 #### tic -toc
 ``` Matlab
 tic;
-pause(1) % instructions
+pause(1)         % instructions
+toc
+pause(1)         % instructions
 toc
 ```
+
+
+### Messages d'erreurs (chap. 5 p.18-22)
+
+
+
+### Déboguage (chap. 5 p.18-22)
+
+
+
+## Fonctions
