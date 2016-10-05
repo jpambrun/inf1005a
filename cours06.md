@@ -187,7 +187,7 @@ end
 
 ```
 >> lookfor biss
-isBissextile                   - ISBISSEX Retourne is l'année est bissextile.
+isBissextile                   - ISBISSEX Retourne si l'année est bissextile.
 >>
 
 >> help isBissextile
@@ -215,9 +215,10 @@ function [ e ] = moneye( D )
        end
     end
 end
-``` Matlab
+```
 
 Autrement:
+
 ```
 Not enough input arguments.
 
