@@ -1,3 +1,8 @@
+## Extra
+
+Deep learning:
+https://docs.google.com/presentation/d/1izN3aH9FoprZho0MEDAnjDPB0FaGyjI2KYv1-wM79Dc/edit?usp=sharing
+
 ## Retour sur le cours 5
  * Résolution de problèmes
    1. La **définition** du problème
@@ -66,11 +71,6 @@ D= [5,4];
 e = [];
 for i = 1:D(1)
    for j = 1:D(2)
-      %if i==j
-      %    e(i,j) = 1;
-      %else
-      %    e(i,j) = 0;
-      %end
       e(i,j) = i == j;
    end
 end
