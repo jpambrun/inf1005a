@@ -61,39 +61,6 @@ COMMENT?
  - développement piloté par les tests (test driven development)
    * code d'abord les tests avec même l'implémentation des fonctions
 
-## Déboguage: calcul du temps
-
-#### pause
-``` Matlab
-pause()
-pause(1.5)
-```
-
-#### clock
-``` Matlab
-t1 = clock;
-pause(1) % instructions
-t2 = clock;
-
-temps_ecoule = etime(t2,t1)
-```
-
-#### cputime
-``` Matlab
-t1 = cputime;
-pause(1) % instructions
-t2 = cputime;
-
-t2-t1
-```
-
-#### tic -toc
-``` Matlab
-tic;
-pause(1) % instructions
-toc
-```
-
 ## Exercices
 
 #### E1 : Nombres premiers
