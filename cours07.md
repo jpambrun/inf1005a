@@ -12,6 +12,25 @@
 
 ## nargin() / nargout ()
 
+ * **N**umber of function **in**put **arg**uments
+ * **N**umber of function **out**put **arg**uments
+ 
+ 
+``` Matlab
+% tiré de: doc nargin
+
+function c = addme(a,b)
+
+switch nargin
+    case 2
+        c = a + b;
+    case 1
+        c = a + a;
+    otherwise
+        c = 0;
+end
+```
+
 ## Nombre indéfini de paramètres / valeurs de retour
 
 ## Particularités d’une fonction en MATLAB
