@@ -64,4 +64,32 @@ Mais ```nargin()``` est plus élégant et lisible:
 
 ## Nombre indéfini de paramètres / valeurs de retour
 
+``` Matlab
+function [ varargout ] = numels( varargin )
+%NUMELS Number of elements in multiple arrays
+%   [N1, N2, ...] = numel(A, B, ...) returns the number of elements, N1,
+%   N2, ..., in array A,B, ...
+
+    for i=1:length(varargin)
+        varargout{i} = numel(varargin{i});
+    end
+end
+```
+```
+>> numels(eye(3))
+ans =
+     9
+>> numels(eye(3), eye(5))
+ans =
+     9
+>> [N1,N2] = numels(eye(3), eye(5))
+
+N1 =
+     9
+
+N2 =
+    25
+```
+
+
 ## Particularités d’une fonction en MATLAB
