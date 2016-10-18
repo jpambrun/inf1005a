@@ -10,6 +10,25 @@
     * L'ordre des paramètre est important. C'est la position qui détermine dans quel variable ils seront placés.
     * Peut retourner une ou plusieurs valeurs.
 
+``` Matlab
+%***************************************
+% Nom du fichier: addme.m          
+% Description: Exemple de fonction    
+% Auteur: JF Pambrun (inspiré de 'doc nargin')
+% Date: 18 oct. 2016          
+%***************************************
+
+function [c] = addme (a, b)
+% ADD  Additionne deux valeurs.
+%   C = ADDME(A) additionne A a lui meme.
+%   C = ADDME(A,B) additionne A et B ensemble.
+%
+%   See also SUM, PLUS.
+  c = a + b;
+end
+```
+
+
 ## nargin() / nargout ()
 
  * **N**umber of function **in**put **arg**uments
