@@ -92,4 +92,64 @@ N2 =
 ```
 
 
+
+``` Matlab
+function [ mad, mse, psnr ] = immetric( I, Id )
+%IMMETRIC Compute image metrics
+%   [ mad, mse, psnr ] = immetric( I, Id ) ...
+    I = double(I);
+    Id = double(Id);
+
+    fprintf('calc mad')
+    Idiff = I-Id;
+    mad = max(abs(Idiff(:)));
+    
+    if nargout > 1
+        fprintf(', mse');
+        mse = mean(Idiff(:).^2);
+    end
+    
+    if nargout > 2
+        fprintf(', psnr\n');
+        psnr = 20*log10(max(I(:))/sqrt(mse));
+    end
+end
+```
+
+```
+>> immetric(I, Id)
+calc mad
+ans =
+
+   109
+   
+>> [mad, psnr] = immetric(I, Id)
+calc mad, mse
+mad =
+   109
+
+psnr =
+  590.2361  % même si la variable s'appel psnr, c'est le résultat de mse étant donné la 2e position
+
+>> [mad, mse, psnr] = immetric(I, Id)
+calc mad, mse, psnr
+
+mad =
+   109
+
+mse =
+  590.2361
+
+
+psnr =
+   20.3522
+   
+>> if immetric(I, Id) > 10
+        %
+   end
+calc mad
+>> 
+```
+
+
 ## Particularités d’une fonction en MATLAB
