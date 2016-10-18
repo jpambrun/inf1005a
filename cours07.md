@@ -31,6 +31,37 @@ switch nargin
 end
 ```
 
+Au cours 6, j'avais proposé:
+
+``` Matlab
+function [ e ] = moneye( D )
+%MONEYE Identity matrix.
+%   eye(N) is the N-by-N identity matrix.
+%   eye(M,N) or eye([M,N]) is an M-by-N matrix with 1's on
+%   the diagonal and zeros elsewhere.
+
+    if ~exist('D', 'var')
+        D = [5,5];
+    end
+
+    e = [];
+    for i = 1:D(1)
+       for j = 1:D(2)
+          e(i,j) = i == j;
+       end
+    end
+end
+```
+
+Mais ```nargin()``` est plus élégant et lisible:
+
+``` Matlab
+    if nargin() < 1
+        D = [5,5];
+    end
+```
+
+
 ## Nombre indéfini de paramètres / valeurs de retour
 
 ## Particularités d’une fonction en MATLAB
