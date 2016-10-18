@@ -56,6 +56,23 @@ Notes:
  * Il est impossible d'utiliser les fonction ```min()``` et ```max()``` après la ligne ```[min, max] = minmax(x);```. Avant ça porterait à confusion.
  * Les fonctions d'un même fichier ont prioritées dans l'ordre d'appel sur les fonctions définies ailleurs. 
     * Peut être utile pour le débogage. On remplace une fonction par un 'stub' qui retourne toujours la même valeur connue.
+p.ex. :
+
+``` Matlab
+function [cmd] = getAndDecodeCommand (ip, port)
+  rep = getNextCommand(ip, port)
+  
+  % decode rep...
+  % cmd = ...
+
+end
+
+
+function [rep] = getNextCommand (ip, port)
+  rep = '<square> 12 34 5 <square>';
+end
+```
+
 
 ## nargin() / nargout ()
 
