@@ -10,6 +10,8 @@
     * L'ordre des paramètre est important. C'est la position qui détermine dans quel variable ils seront placés.
     * Peut retourner une ou plusieurs valeurs.
 
+#### Bon exemple:
+
 ``` Matlab
 %***************************************
 % Nom du fichier: addme.m          
@@ -28,6 +30,30 @@ function [c] = addme (a, b)
 end
 ```
 
+#### Exemple de plusieurs fonctions dans un fichier M:
+
+``` Matlab
+function [moyenne, min, max] = messtats (x)
+  n = length(x);
+  moyenne    = mamoyenne(x,n);
+  [min, max] = minmax(x);
+end
+
+function a = mamoyenne(v,n)
+  a = sum(v)/n;
+end
+
+function [min, max] = minmax(v)
+  min = min(v);
+  max = max(v);
+end
+```
+Notes:
+ * Supporant que le fichier M s'appel ```messtats.m```, seul la fonction ```messtats()``` sera accessible de l'extérieur.
+ * C.-à-d. que seule ```messtats()``` peut utiliser ```mamoyenne(v,n)``` et ```minmax(v)```.
+ * La variable ```n``` est local à ```messtats()```, elle n'est pas accessible dans le script/fonction qui l'appel ou les fonctions qu'elle appel (```mamoyenne()``` et ```minmax()```).
+ * Une copie de ```n``` de ```messtats()``` est passé dans ```n``` de mamoyenne. Ce n'est pas la même variable. Changer ```n``` dans mamoyenne n'affecte pas ```n``` dans messtats.
+ * Il est impossible d'utiliser les fonction ```min()``` et ```max()``` après la ligne ```[min, max] = minmax(x);```. Avant ça porterait à confusion.
 
 ## nargin() / nargout ()
 
