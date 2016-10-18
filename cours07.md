@@ -54,6 +54,8 @@ Notes:
  * La variable ```n``` est local à ```messtats()```, elle n'est pas accessible dans le script/fonction qui l'appel ou les fonctions qu'elle appel (```mamoyenne()``` et ```minmax()```).
  * Une copie de ```n``` de ```messtats()``` est passé dans ```n``` de mamoyenne. Ce n'est pas la même variable. Changer ```n``` dans mamoyenne n'affecte pas ```n``` dans messtats.
  * Il est impossible d'utiliser les fonction ```min()``` et ```max()``` après la ligne ```[min, max] = minmax(x);```. Avant ça porterait à confusion.
+ * Les fonctions d'un même fichier ont prioritées dans l'ordre d'appel sur les fonctions définies ailleurs. 
+    * Peut être utile pour le débogage. On remplace une fonction par un 'stub' qui retourne toujours la même valeur connue.
 
 ## nargin() / nargout ()
 
