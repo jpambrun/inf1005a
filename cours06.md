@@ -87,7 +87,6 @@ if ~isreal(D)
     error('D ne dois pas avoir de composante imaginaire.')
 end
 
-
 if max(D) > 1000
     warning('Une taille supérieure à 1000, comme %i, est inefficace.',length(D))
 end
