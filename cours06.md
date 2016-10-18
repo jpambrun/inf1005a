@@ -1,8 +1,3 @@
-## Extra
-
-Deep learning:
-https://docs.google.com/presentation/d/1izN3aH9FoprZho0MEDAnjDPB0FaGyjI2KYv1-wM79Dc/edit?usp=sharing
-
 ## Retour sur le cours 5
  * Résolution de problèmes
    1. La **définition** du problème
