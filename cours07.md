@@ -217,3 +217,35 @@ calc mad
 
 
 ## Particularités d’une fonction en MATLAB
+
+
+## Exercice
+
+Tiré de Chapitre 4 - Exercice matlab (Guillaume-Alexandre Bilodeau)
+
+#### Exercice #19: Calcul de pi
+Écrire un programme qui calcule la valeur de π à partir de la série infinie
+
+pi = 4 - 4/3 + 3/5 - 4/7 + 4/9 - 4/11 ...
+
+Le programme affiche les valeurs de pi, selon le nombre de termes choisi par l'utilisateur.
+Finalement le programme détermine et affiche le nombre de termes nécessaires de cette
+série avant d'obtenir une erreur de 0.00001.
+
+#### Exercice #21:
+Une personne à la retraite dépose 300 000$ dans un compte qui paye 5% d'intérêt par
+année. La personne planifie de retirer l'argent du compte une fois par année. Il commence
+par retirer 25 000$ la première année, et ensuite pour les années futures, il majore le
+montant retiré par le taux d'inflation. Par exemple, si le taux d'inflation est de 3%, il retire
+25 750% la deuxième année. Calculer le nombre d'années nécessaires avant que le
+compte contienne 0$ pour un taux d'inflation spécifié par l'utilisateur. Afficher le résultat
+avec fprintf(). 
+
+#### Exercice #28 Distance la plus courte entre des domiciles
+Soit l'École Polytechnique aux coordonnées (0,0) d'un plan. L'axe des Y pointe vers le
+nord de l'île de Montréal et l'axe des X pointe vers l'est de l'île. On peut alors exprimer la
+position du domicile d'une personne dans ce référentiel.
+Écrire un programme qui demande des noms de personnes et les coordonnées (x,y) de
+leurs résidences dans le référentiel décrit précédemment et affiche les noms des deux
+personnes habitant le plus près l'une de l'autre. 
+
