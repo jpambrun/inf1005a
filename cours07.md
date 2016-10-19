@@ -221,8 +221,10 @@ calc mad
 
 ## Exercice
 
-Tiré de Chapitre 4 - Exercice matlab (Guillaume-Alexandre Bilodeau)
+### Intra passé
+* intra1005AIntraSolH16.pdf : Q2
 
+### Tiré de 'Chapitre 4 - Exercices matlab' (Guillaume-Alexandre Bilodeau)
 #### Exercice #19: Calcul de pi
 Écrire un programme qui calcule la valeur de π à partir de la série infinie
 
