@@ -12,3 +12,10 @@
   * Une fonction sans param peut être appelé sans ```()``` (p.ex. help ou nargin)
   * Une fontion que prend ques des 'Strings' en paramètre peut aussi être appelé sans ```()```. (p.ex. ```format('short','g')``` vs ```format short g```)
     
+# Entrées/sorties (I/O)
+
+### Fichiers (p. 3-13)
+### Fichiers texte (p. 15-26)
+### Fichiers binaires (p. 28-39)
+### Détection de la fin des fichiers (p. 41-42)
+### Manipulation de fichiers et de répertoires (p. 44)
