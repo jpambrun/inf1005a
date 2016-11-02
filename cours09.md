@@ -26,6 +26,25 @@ fprintf(fid, 'ligne 3\n')
 fclose(fid);
 ```
 
+produit :
+```
+ans =
+     8
+ans =
+     8
+ans =
+     8
+```
+
+et le fichier ```filetest.txt``` contient:
+
+```
+ligne 1
+ligne 2
+ligne 3
+
+```
+
 #### fscanf une ligne à la fois
 ``` Matlab
 fid = fopen('filetest.txt', 'r');
@@ -35,11 +54,30 @@ fscanf(fid, 'ligne %d\n',1)
 fclose(fid);
 ```
 
+produit : 
+```
+ans =
+     1
+ans =
+     2
+ans =
+     3
+```
+
 #### fscanf d'un coup
 ``` Matlab
 fid = fopen('filetest.txt', 'r');
 fscanf(fid, 'ligne %d\n')
 fclose(fid);
+```
+
+produit :
+
+```
+ans =
+     1
+     2
+     3
 ```
 
 #### fscanf "avancé"
@@ -63,6 +101,18 @@ while ~feof(fid)
 end
 fclose(fid);
 ```
+produit :
+```
+ans = 
+      type: '<line>'
+    coords: [4x1 double]
+ans = 
+      type: '<oval>'
+    coords: [4x1 double]
+ans = 
+      type: '<line>'
+    coords: [4x1 double]
+```
 
 
 #### exemple sscanf variées
@@ -71,22 +121,65 @@ s = '2.7183  3.1416';
 A = sscanf(s,'%f')
 
 s = 'val: 2.7183  3.1416';
-A = sscanf(s,'%f')% A = sscanf(s,'val: %f %f')
+B = sscanf(s,'%f')
+B2 = sscanf(s,'val: %f %f')
 
 s = 'abc def hij klm';
-[A count] = sscanf(s, '%s')
+[C count] = sscanf(s, '%s')
+
 
 s = 'abc 12 def 13';
-[A count] = sscanf(s, '%s %d')
+[D count] = sscanf(s, '%s %d')
 
 % from doc scanf
 s = '78°F 72°F 64°F 66°F 49°F';
-sscanf(s, ['%d' char(176) 'F'])
+E = sscanf(s, ['%d' char(176) 'F'])
 
+clc
 s = '99999999999999';
-A = sscanf(s, '%i')
-%int64(A) %intmax('int32')
-B = sscanf(s, '%li')
+F = sscanf(s, '%i') % int64(F)
+G = sscanf(s, '%li')
+intmax('int32')
+```
+
+produit:
+```
+A =
+    2.7183
+    3.1416
+B =
+     []
+B2 =
+    2.7183
+    3.1416
+C =
+abcdefhijklm
+count =
+     4
+D =
+    97
+    98
+    99
+    12
+   100
+   101
+   102
+    13
+count =
+     4
+E =
+    78
+    72
+    64
+    66
+    49
+F =
+   2.1475e+09    % 2147483647
+G =
+       99999999999999
+ans =
+  2147483647
+
 ```
 
 #### fgetl
