@@ -3,14 +3,14 @@
   * Indentations, commentaires et en-tête.
   * Commentaire ```H1``` est un résumé d'une ligne.
   * Le nom de la fonction doit être le même que celui du fichier.
-  * Un fichier peut contenir plusieurs fonction, mais une seule est visible de l'extérieur.
+  * Un fichier peut contenir plusieurs fonctions, mais une seule est visible de l'extérieur.
   * Ses variables sont locales.
-  * L'ordre des paramètres d'entré est important.
+  * L'ordre des paramètres d'entrée est important.
   * Peut retourner une ou plusieurs valeurs.
   * nargin / nargout
   * varargin, varargout
   * Une fonction sans param peut être appelé sans ```()``` (p.ex. help ou nargin)
-  * Une fontion que prend ques des 'Strings' en paramètre peut aussi être appelé sans ```()```. (p.ex. ```format('short','g')``` vs ```format short g```)
+  * Une fonction que prend que des 'Strings' en paramètre peut aussi être appelé sans ```()```. (p.ex. ```format('short','g')``` vs ```format short g```)
     
 # Entrées/sorties (I/O)
 
@@ -192,7 +192,7 @@ while ischar(tline)
     tline = fgetl(fid);
 end
 
-% a ce point ci, tline est numerique
+% a ce point-ci, tline est numérique
 tline
 fclose(fid);
 ```
@@ -268,7 +268,6 @@ imwrite(I, 'peppers.ppm')
 ``` Matlab
 % P6 
 % 1024 788 
-% # A comment
 % 255
 
 % RGBRGBRGB
@@ -293,7 +292,7 @@ B= i_raw(3:3:end);
 I = [R,G,B];
 I = reshape(I, [i_size(1), i_size(2),3]);
 
-% parceque le fichier est stoké en ordre raster..
+% parceque le fichier est stocké en ordre raster..
 I = permute(I,[2 1 3]);
 
 fclose(fid)
