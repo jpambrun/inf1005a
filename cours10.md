@@ -128,18 +128,31 @@ plot(x, y2)
 
 
 %% colormap
+close all;
+h = fspecial('log', 256, 100);
+imshow(h,[])
+% colormap(jet)
+% colormap(bone)
+% colormap(parula)
 
 %% print
+close all;
+h = fspecial('log', 32, 100);
+surf(h)
+% print -djpeg toto.jpg % raster
+% print -dpdf toto.pdf  % vector
 
 %% plot3
+% from doc
+t = 0:pi/50:10*pi;
+st = sin(t);
+ct = cos(t);
 
-%% loglog
-
-%% semilogx & semilogy
+figure
+plot3(st,ct,t)
+% grid on
 
 %% plotyy
-
-%% bar & barh
-
-
-```
+close all
+figure;plot(x, y1, x, y3)
+figure;plotyy(x, y1, x, y3)```
