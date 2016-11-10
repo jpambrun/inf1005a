@@ -29,23 +29,17 @@ TODO:
 ``` Matlab
 x = 0:.1:2*pi;
 y1 = sin(x);
-y2 = cos(x);
+y2 = sawtooth(x*3);
 y3 = tan(x);
 
 %%
 close all;
-plot(x, y1)
-
-
-%%
-close all;
-plot(x, y2)
-
+plot(x, y1) %y2
 
 %% deux figures-ish
 close all;
 plot(x, y1)
-plot(x, y2) % remplace plot(x, y1)
+plot(x, y2) % remplace plot(x, y1) dans la figure
 
 
 %% deux figures
@@ -135,7 +129,7 @@ ylabel('les Y')
 %% légende
 close all;
 plot(x, y1, x, y2)
-legend('sin(x)', 'cos(x)')
+legend('sin(x)', 'sawtooth(x)')
 % legend('sin(x)', 'cos(x)','Location','northwest')
 
 
@@ -149,7 +143,7 @@ plot(x, y2)
 
 %% colormap
 close all;
-h = fspecial('log', 256, 100);
+h = 160*membrane(1,100);
 imshow(h,[])
 % colormap(jet)
 % colormap(bone)
@@ -157,10 +151,10 @@ imshow(h,[])
 
 %% print
 close all;
-h = fspecial('log', 32, 100);
+h = 160*membrane(1,10);
 surf(h)
 % print -djpeg toto.jpg % raster
-% print -dpdf toto.pdf  % vector
+% print -dpdf toto.pdf  % vectoriel
 
 %% plot3
 % from doc
@@ -175,4 +169,5 @@ plot3(st,ct,t)
 %% plotyy
 close all
 figure;plot(x, y1, x, y3)
-figure;plotyy(x, y1, x, y3)```
+figure;plotyy(x, y1, x, y3)
+```
