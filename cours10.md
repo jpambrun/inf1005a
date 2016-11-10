@@ -5,22 +5,22 @@
    * a : ajout
    * rt, wt, at : pour du texte
  * fclose(fid) : ferme le fichier (important!)
- * fprintf(fid,...): écrit du texte dans un fihcier
- * on doit vérifier le retour de fopen, fclose et fprintf pour s'assuerer que ça fonctionne (i.e. manque d'espace, mauvais nom de fichier)
+ * fprintf(fid,...): écrit du texte dans un fichier
+ * on doit vérifier le retour de fopen, fclose et fprintf pour s'assurer que ça fonctionne (i.e. manque d'espace, mauvais nom de fichier)
  * frwite(fid, ...): écrit en binaire 
- * fscanf(fid, ...): lit une chaine formatté
-  * attention au très grand chiffres (requiert %li pour long)
+ * fscanf(fid, ...): lit une chaîne formatée
+  * attention aux très grands chiffres (requiert %li pour long)
  * fread(fid, ...): lit en binaire
-   * 'uint8=>uint8' pour le type permet de lire des uint8 et les convertir en uint8 (sinon Matlab les stoque en double)
+   * 'uint8=>uint8' pour le type permet de lire des uint8 et les convertir en uint8 (sinon Matlab les stocke en double)
  * fgetl(fid) : récupère une ligne et saute les \n\r
- * en lecture, on doit vérifier le fin du fichier (avec feof, ischar, etc.)
+ * en lecture, on doit vérifier la fin du fichier (avec feof, ischar, etc.)
  
 
 
 
 TODO:
 
-* p.18 : est-ce qu'on peut vraiment utilisé le no de figure? la doc semble indique qu'il faut utiliser un handle.
+* p.18 : est-ce qu'on peut vraiment utiliser le no de figure? la doc semble indique qu'il faut utiliser un handle.
 
 
 
