@@ -108,6 +108,10 @@ plot(x, y1, x, y2)
 set(h.CurrentAxes, 'Xgrid', 'on');
 set(h.CurrentAxes.Children(1), 'LineWidth', 2)
 
+%% set - get avec le no. de figure
+figure(12)
+set(12, 'Position', [100 100 200 200])
+
 %% axis
 close all;
 plot(x,y1);
