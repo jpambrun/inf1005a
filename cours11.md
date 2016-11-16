@@ -31,6 +31,8 @@ ans =
 ```
 
 
+### Complément à deux
+
 | Binaire| Non Signé | Complément à deux |
 |---|---|---|
 | 0111 1111 |127|127|
@@ -45,11 +47,7 @@ ans =
 | 1000 0000	|128|−128|
 
 
-
-ex 2comp: 15 + -5
-
-From wikipedia.org
-
+#### Addition
 ```
 11111 111   (carry)
    0000 1111  (15)
@@ -68,7 +66,7 @@ From wikipedia.org
 ```
 
 
-substraction
+#### Soustraction
 
 ```
 11110 000   (borrow)
