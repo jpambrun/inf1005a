@@ -165,7 +165,7 @@ ans =
 
 Donc **e=-4**.
 
-Maintenant, on pourrait déterminer quel séquence de (X*2^-1) + (X*2^-2) + (X*2^-3) + ... + (X*2^-23) = 0.6, mais il y a un truc.
+Maintenant, on pourrait déterminer quel séquence de ```(X*2^-1) + (X*2^-2) + (X*2^-3) + ... + (X*2^-23) = 0.6```, mais il y a un truc.
 
 On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut être que '0' ou '1'. On recommence avec le chiffre après le '.' jusqu'au nombre de bit requis ou jusqu'à ce que le nombre après le points soit zéro.
 
@@ -197,12 +197,16 @@ On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut
 |24|.8|1|On doit en calculer un autre pour tenir compte de l'arrondissement|
 
 Pour combiner le tout:
+
+
 Pour s:
 s est inséré comme tel sans modification.
+
 
 Pour e:
 e contient un biais de 127 qu'il faut ajouter. Ceci permet les valeurs négative.
 Ici, ```127+(-4) = 123```, en binaire ```0111 1011```.
+
 
 Pour frac:
 Il faut ajouter le 24e (en single) bit pour arrondir.
