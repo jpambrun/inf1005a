@@ -135,5 +135,5 @@ Peu flexible, on veut un point flottant et signé. La solution : IEEE 754.
 
 || signe (s)| exposant (e)| mantisse (frac) |
 |---:|:---:|:---:|:---:|
-|single (32 bits)|X|XXXXXXXX (8) |XXXXXXXXXXXXXXXXXXXXXXX (23)|
-|single (32 bits)|X|XXXXXXXXXXX (11)|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (52)|
+|single (32 bits)|x|xxxxxxxx (8) |xxxxxxxxxxxxxxxxxxxxxxx (23)|
+|single (32 bits)|x|xxxxxxxxxxx (11)|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (52)|
