@@ -169,10 +169,32 @@ Maintenant, on pourrait déterminer quel séquence de (X*2^-1) + (X*2^-2) + (X*2
 
 On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut être que '0' ou '1'. On recommence avec le chiffre après le '.' jusqu'au nombre de bit requis ou jusqu'à ce que le nombre après le points soit zéro.
 
-|après le '.'|après le '.'| notes |
-|:--:|:--:|:--|
-|.6|1| ```0.6``` est la valeur de dépant. ```0.6*2 = 1.2```, la seconde contient le ```1```|
-|.2|0|le .2 est la suite de 1.2. .2*2=0.4. Le 0 de 0.4 est rapporté dans le seconde colonne|
+|position|après le '.'|après le '.'| notes |
+|:--:|:--:|:--:|:--|
+|1|.6|1| ```0.6``` est la valeur de départ. ```0.6*2 = 1.2```, on met le ```1``` de ```1.2``` dans la troisième colonne|
+|2|.2|0|le ```.2``` est la suite du ```1.2```. ```.2*2=0.4```. Le 0 de 0.4 est rapporté dans le troisième colonne|
+|3|.4|0||
+|4|.8|1||
+|5|.6|1||
+|6|.2|0||
+|7|.4|0||
+|8|.8|1||
+|9|.6|1||
+|10|.2|0||
+|11|.4|0||
+|12|.8|1||
+|13|.6|1||
+|14|.2|0||
+|15|.4|0||
+|16.8|1||
+|17|.6|1||
+|18|.2|0||
+|19|.4|0||
+|20|.8|1||
+|21|.6|1||
+|22|.2|0||
+|23|.4|0|C'est le dernier bit de la mantisse (frac)|
+|24|.8|1|On doit en calculer un autre pour tenir compte de l'arrondissement|
 
 
 
