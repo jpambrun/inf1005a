@@ -171,7 +171,7 @@ On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut
 
 |après le '.'|après le '.'| notes |
 |:--:|:--:|:--|
-|.6|1| 0.6 est la valeur de dépant. 0.6*2 = 1.2, la seconde contient le 1|
+|.6|1| ```0.6``` est la valeur de dépant. ```0.6*2 = 1.2```, la seconde contient le ```1```|
 |.2|0|le .2 est la suite de 1.2. .2*2=0.4. Le 0 de 0.4 est rapporté dans le seconde colonne|
 
 
