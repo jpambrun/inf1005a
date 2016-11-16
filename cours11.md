@@ -1,6 +1,6 @@
 ## Retour sur l'examen
 
- * constat:
+ * Constat:
     - Notre moyenne est la pire avec 8.0
     - Les autres moyennes (3/5) se situent entre 8.5 et 9.5.
     - un groupe a une moyenne de 11.5.
