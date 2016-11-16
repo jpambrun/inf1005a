@@ -216,7 +216,7 @@ Il faut ajouter le 24e (en single) bit pour arrondir.
 
 || signe (s)| exposant (e)| mantisse (frac) |
 |---:|:---:|:---:|:---:|
-|single (32 bits)|0|0111 1011|1001 1001 1001 1001 1001 101 (23)|
+|single (32 bits)|0|0111 1011|1001 1001 1001 1001 1001 101 |
 
-
+Pour valider, voir https://www.h-schmidt.net/FloatConverter/IEEE754.html
 
