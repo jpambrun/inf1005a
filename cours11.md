@@ -1,4 +1,4 @@
-## Retour sur examen
+## Retour sur l'examen
 
  * constat:
     - Notre moyenne est la pire avec 8.0
@@ -17,6 +17,9 @@
  * On voudrait nous faire croire que l'explication la plus probable est l'option 1, mais avec un n=80 et une différence d'un (1) écart type est nous et eux, c'est extrêmement improbable. Personnellement, l'option 3 me semble la plus probable.
  * Si j'étais vous, j'utiliserais tous les moyens à ma disposition pour faire changer cette décision.
 
+
+
+## Représentation des nombres
 
 ``` Matlab
 >> 1-0.2-0.2-0.2-0.2-0.2
