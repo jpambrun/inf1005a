@@ -137,7 +137,7 @@ Peu flexible, on veut un point flottant et signé. La solution : IEEE 754.
 || signe (s)| exposant (e)| mantisse (frac) |
 |---:|:---:|:---:|:---:|
 |single (32 bits)|x|xxxxxxxx (8) |xxxxxxxxxxxxxxxxxxxxxxx (23)|
-|single (32 bits)|x|xxxxxxxxxxx (11)|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (52)|
+|double (64 bits)|x|xxxxxxxxxxx (11)|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (52)|
 
 ##### Conversion
 Ex: 0.1
@@ -165,11 +165,11 @@ ans =
 
 Donc **e=-4**.
 
-Maintenant, on pourrait déterminer quel séquence de ```(X*2^-1) + (X*2^-2) + (X*2^-3) + ... + (X*2^-23) = 0.6```, mais il y a un truc.
+Maintenant, on pourrait déterminer quelle séquence de ```(X*2^-1) + (X*2^-2) + (X*2^-3) + ... + (X*2^-23) = 0.6```, mais il y a un truc.
 
-On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut être que '0' ou '1'. On recommence avec le chiffre après le '.' jusqu'au nombre de bit requis ou jusqu'à ce que le nombre après le points soit zéro.
+On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut être que '0' ou '1'. On recommence avec le chiffre après le '.' jusqu'au nombre de bits requis ou jusqu'à ce que le nombre après le point soit zéro.
 
-|position|après le '.'|après le '.'| notes |
+|position|après le '.'|avant le '.'| notes |
 |:--:|:--:|:--:|:--|
 |1|.6|1| ```0.6``` est la valeur de départ. ```0.6*2 = 1.2```, on met le ```1``` de ```1.2``` dans la troisième colonne|
 |2|.2|0|le ```.2``` est la suite du ```1.2```. ```.2*2=0.4```. Le 0 de 0.4 est rapporté dans le troisième colonne|
@@ -204,7 +204,7 @@ s est inséré comme tel sans modification. Ici, s= ```0```
 
 
 ###### Pour e:
-e contient un biais de 127 qu'il faut ajouter. Ceci permet les valeurs négative.
+e contient un biais de 127 qu'il faut ajouter. Ceci permet les valeurs négatives.
 Ici, ```127+(-4) = 123```, en binaire ```0111 1011```.
 
 
