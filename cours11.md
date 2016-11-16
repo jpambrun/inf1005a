@@ -121,6 +121,7 @@ ans =
 
 
 ##### Binaire
+
 |2^3|2^2|2^1|2^0|2^-1|2^-2|2^-3|2^-4|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|0|1|1|1|0|0|1|
@@ -137,3 +138,44 @@ Peu flexible, on veut un point flottant et signé. La solution : IEEE 754.
 |---:|:---:|:---:|:---:|
 |single (32 bits)|x|xxxxxxxx (8) |xxxxxxxxxxxxxxxxxxxxxxx (23)|
 |single (32 bits)|x|xxxxxxxxxxx (11)|xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (52)|
+
+##### Conversion
+Ex: 0.1
+```0.1 = (-1)^s * (1+frac) * 2^e```
+
+Comme 0.1 est positif, on déduit que **s=0**.
+
+```0.1/2^e = (1+frac) ```
+
+Je cherche le e qui me donne la forme (1+frac):
+```
+>> 0.1/2^-1
+ans =
+    0.2000
+>> 0.1/2^-2
+ans =
+    0.4000
+>> 0.1/2^-3
+ans =
+    0.8000
+>> 0.1/2^-4
+ans =
+    1.6000
+```
+
+Donc **e=-4**.
+
+Maintenant, on pourrait déterminer quel séquence de (X*2^-1) + (X*2^-2) + (X*2^-3) + ... + (X*2^-23) = 0.6, mais il y a un truc.
+
+On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut être que '0' ou '1'. On recommence avec le chiffre après le '.' jusqu'au nombre de bit requis ou jusqu'à ce que le nombre après le points soit zéro.
+
+|après le '.'|après le '.'| notes |
+|:--:|:--:|:--|
+|.6|1| 0.6 est la valeur de dépant. 0.6*2 = 1.2, la seconde contient le 1|
+|.2|0|le .2 est la suite de 1.2. .2*2=0.4. Le 0 de 0.4 est rapporté dans le seconde colonne|
+
+
+
+
+
+
