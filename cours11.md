@@ -1,3 +1,23 @@
+## Retour sur examen
+
+ * constat:
+    - Notre moyenne est la pire avec 8.0
+    - Les autres moyennes (3/5) se situent entre 8.5 et 9.5.
+    - un groupe a une moyenne de 11.5.
+ * On a eu une rencontre à 6 jeudi (5 chargés + la coordonnatrice) et on a dégagé deux consensus:
+   1. Cette disparité des notes est statistiquement improbable (je dirais impossible) et inéquitable.
+   2. La solution consensuelle était de normaliser les notes à 10 (c.-à-d. ajouter 2 points à tout le monde dans notre groupe) et recorriger toutes les copies du groupe à 11.5.
+ * Le groupe de 11.5 a été recorrigé et la moyenne est maintenant de 11.0.
+ * Or, lundi, on **la coordonnatrice nous a informés qu'il n'y aurait pas de normalisation**, et ce, sans explication.
+ * Cette position me semble absolument injustifiable. Le groupe à 11.5 va manifestement s'accaparer presque la totalité de A et notre groupe sera condamné au B et au C. En plus, les étudiants de notre groupe sont maintenant disproportionnèrent à risque d'échec, surtout avec la règle du 8/20.
+ * Qu'est-ce qui peut expliquer cette différence? 
+  1. Ce groupe contient les meilleurs étudiants.
+  2. Cet enseignant, qui en est à sa première charge, est significativement meilleur que les autres.
+  3. Cet enseignant a laissé transparaître un peu trop les questions lors de la préparation à l'examen.
+ * On voudrait nous faire croire que l'explication la plus probable est l'option 1, mais avec un n=80 et une différence d'un (1) écart type est nous et eux, c'est extrêmement improbable. Personnellement, l'option 3 me semble la plus probable.
+ * Si j'étais vous, j'utiliserais tous les moyens à ma disposition pour faire changer cette décision.
+
+
 ``` Matlab
 >> 1-0.2-0.2-0.2-0.2-0.2
 ans =
