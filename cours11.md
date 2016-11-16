@@ -186,7 +186,7 @@ On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut
 |13|.6|1||
 |14|.2|0||
 |15|.4|0||
-|16.8|1||
+|16|.8|1||
 |17|.6|1||
 |18|.2|0||
 |19|.4|0||
@@ -196,8 +196,27 @@ On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut
 |23|.4|0|C'est le dernier bit de la mantisse (frac)|
 |24|.8|1|On doit en calculer un autre pour tenir compte de l'arrondissement|
 
+Pour combiner le tout:
+Pour s:
+s est inséré comme tel sans modification.
+
+Pour e:
+e contient un biais de 127 qu'il faut ajouter. Ceci permet les valeurs négative.
+Ici, ```127+(-4) = 123```, en binaire ```0111 1011```.
+
+Pour frac:
+Il faut ajouter le 24e (en single) bit pour arrondir.
+```
+1001 1001 1001 1001 1001 100
+                         + 1
+============================
+1001 1001 1001 1001 1001 101
+```
 
 
+|| signe (s)| exposant (e)| mantisse (frac) |
+|---:|:---:|:---:|:---:|
+|single (32 bits)|0|0111 1011|1001 1001 1001 1001 1001 101 (23)|
 
 
 
