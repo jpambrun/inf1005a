@@ -200,7 +200,7 @@ Pour combiner le tout:
 
 
 ###### Pour s:
-s est inséré comme tel sans modification.
+s est inséré comme tel sans modification. Ici, s= ```0```
 
 
 ###### Pour e:
