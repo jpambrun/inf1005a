@@ -120,8 +120,18 @@ ans =
 ```(4*10^3) + (2*10^2) + (4*10^1) + (5*10^0) . (6*10^-1) + (7*10^-2) + (2*10^-3) + (3*10^-4) = 4245.6723```
 
 
+##### Binaire
 |2^3|2^2|2^1|2^0|2^-1|2^-2|2^-3|2^-4|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|0|1|1|1|0|0|1|
 
 ``` (1*2^3) + (0*2^2) + (1*2^1) + (1*2^0) + (1*2^-1) + (0*2^-2) + (0*2^-3) + (1*2^-4) = 11.5625 ```
+
+
+Peu flexible, on veut un point flottant et signé. La solution : IEEE 754.
+
+``` A = (-1)^s * (1+frac) * 2^e ```
+|| signe (s)| exposant (e)| mantisse (frac) |
+|---:|:---:|:---:|:---:|
+|single (32 bits)|X|XXXXXXXX (8) |XXXXXXXXXXXXXXXXXXXXXXX (23)|
+|single (32 bits)|X|XXXXXXXXXXX (11)|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (52)|
