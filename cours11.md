@@ -199,16 +199,16 @@ On multiplie successivement par 2 et on note le chiffre avant le '.', il ne peut
 Pour combiner le tout:
 
 
-Pour s:
+###### Pour s:
 s est inséré comme tel sans modification.
 
 
-Pour e:
+###### Pour e:
 e contient un biais de 127 qu'il faut ajouter. Ceci permet les valeurs négative.
 Ici, ```127+(-4) = 123```, en binaire ```0111 1011```.
 
 
-Pour frac:
+###### Pour frac:
 Il faut ajouter le 24e (en single) bit pour arrondir.
 ```
 1001 1001 1001 1001 1001 100
