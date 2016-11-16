@@ -131,6 +131,8 @@ ans =
 Peu flexible, on veut un point flottant et signé. La solution : IEEE 754.
 
 ``` A = (-1)^s * (1+frac) * 2^e ```
+
+
 || signe (s)| exposant (e)| mantisse (frac) |
 |---:|:---:|:---:|:---:|
 |single (32 bits)|X|XXXXXXXX (8) |XXXXXXXXXXXXXXXXXXXXXXX (23)|
