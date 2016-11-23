@@ -45,4 +45,9 @@
 
 ## Final AUT 2015
 
-
+q1.2 : -65.5
+q1.3c : en binaire, les chances de pas avoir de retenue sont limitées..
+q1.4a : cpu time compte le temps d'usage cpu. Celui-ci peut même être plus élevé que 1 pour une seconde de "wall time" si plusieurs cœurs sont utilisé en même temps. Il peut être de zéro si le cpu n'est pas utilisé.
+q1.4b non, toc retourne déjà le temp entre le tic et le toc.
+q1.4d : Error using toc You must call TIC without an output argument before calling TOC without an input argument.
+q.15c : plot(x1, [y1;y2])
